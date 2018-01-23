@@ -68,30 +68,15 @@ namespace GongSolutions.Wpf.DragDrop
 
         #region  Methods
 
-        private static DataTemplate GetDragAdornerTemplate(UIElement target)
-        {
-            return (DataTemplate) target.GetValue(DragAdornerTemplateProperty);
-        }
+        private static DataTemplate GetDragAdornerTemplate(UIElement target) => (DataTemplate) target.GetValue(DragAdornerTemplateProperty);
 
-        private static IDragSource GetDragHandler(UIElement target)
-        {
-            return (IDragSource) target.GetValue(DragHandlerProperty);
-        }
+        private static IDragSource GetDragHandler(UIElement target) => (IDragSource) target.GetValue(DragHandlerProperty);
 
-        public static IDropTarget GetDropHandler(UIElement target)
-        {
-            return (IDropTarget) target.GetValue(DropHandlerProperty);
-        }
+        public static IDropTarget GetDropHandler(UIElement target) => (IDropTarget) target.GetValue(DropHandlerProperty);
 
-        public static bool GetIsDragSource(UIElement target)
-        {
-            return (bool) target.GetValue(IsDragSourceProperty);
-        }
+        public static bool GetIsDragSource(UIElement target) => (bool) target.GetValue(IsDragSourceProperty);
 
-        public static bool GetIsDropTarget(UIElement target)
-        {
-            return (bool) target.GetValue(IsDropTargetProperty);
-        }
+        public static bool GetIsDropTarget(UIElement target) => (bool) target.GetValue(IsDropTargetProperty);
 
         public static void SetDragAdornerTemplate(UIElement target, DataTemplate value) => target.SetValue(DragAdornerTemplateProperty, value);
 
@@ -249,9 +234,9 @@ namespace GongSolutions.Wpf.DragDrop
             }
 
             // If the target is an ItemsControl then update the drop target adorner.
-            if (sender is ItemsControl)
+            if (sender is ItemsControl control)
             {
-                UIElement adornedElement = ((ItemsControl) sender).GetVisualDescendent<ItemsPresenter>();
+                UIElement adornedElement = control.GetVisualDescendent<ItemsPresenter>();
 
                 if (dropInfo.DropTargetAdorner == null)
                     DropTargetAdorner = null;

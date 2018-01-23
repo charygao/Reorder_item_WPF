@@ -13,11 +13,11 @@
 
 
         <ListBox ItemsSource="{Binding Schools}" DisplayMemberPath="Name"
-                 IsSynchronizedWithCurrentItem="True"
+                 IsSynchronizedWithCurrentItem="True" 
                  dd:DragDrop.IsDropTarget="True" dd:DragDrop.DropHandler="{Binding}" />
 
         <ListBox ItemsSource="{Binding Schools.CurrentItem.(local:SchoolViewModel.Pupils)}" DisplayMemberPath="FullName"
-                 dd:DragDrop.IsDragSource="True" dd:DragDrop.IsDropTarget="True" />  
+                 dd:DragDrop.IsDragSource="True" dd:DragDrop.IsDropTarget="True"/>  
 
         <ListBox ItemsSource="{Binding Pupils}" DisplayMemberPath="FullName"
                  dd:DragDrop.IsDragSource="True" dd:DragDrop.IsDropTarget="True" />        

@@ -11,7 +11,7 @@ namespace SchoolsExample
     {
         #region Fields and Properties
 
-        public ICollectionView Pupils { get; set; }
+        public ObservableCollection<PupilViewModel> Pupils { get; set; }
 
         public ICollectionView Schools { get; }
 
@@ -60,7 +60,7 @@ namespace SchoolsExample
 
             Schools = CollectionViewSource.GetDefaultView(schools);
 
-            var pupils = new ObservableCollection<PupilViewModel>
+            Pupils = new ObservableCollection<PupilViewModel>
             {
                 new PupilViewModel {FullName = "TestPupil1"},
                 new PupilViewModel {FullName = "TestPupil2"},
@@ -68,8 +68,6 @@ namespace SchoolsExample
                 new PupilViewModel {FullName = "TestPupil4"},
                 new PupilViewModel {FullName = "TestPupil5"}
             };
-
-            Pupils = CollectionViewSource.GetDefaultView(pupils);
 
         }
 
