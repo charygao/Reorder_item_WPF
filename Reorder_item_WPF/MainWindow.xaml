@@ -1,0 +1,18 @@
+﻿<Window x:Class="Reorder_item_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525" 
+         xmlns:dd="clr-namespace:GongSolutions.Wpf.DragDrop;assembly=GongSolutions.Wpf.DragDrop">
+    <Grid>
+        <ListBox Grid.Column="1" SelectionMode="Extended" ItemsSource="{Binding MSPCollection}"
+                 dd:DragDrop.IsDragSource="True" Width="300" Margin="0,0,5,0" dd:DragDrop.IsDropTarget="True">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid Background="#2ba3d5" Height="50" Width="280">
+                        <TextBlock Text="{Binding Name}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="40"/>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </Grid>
+</Window>

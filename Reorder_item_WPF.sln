@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2020
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reorder_item_WPF", "Reorder_item_WPF\Reorder_item_WPF.csproj", "{191D9B69-4A13-448B-9553-3F94C092B792}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GongSolutions.Wpf.DragDrop", "gong-wpf-dragdrop\GongSolutions.Wpf.DragDrop\GongSolutions.Wpf.DragDrop.csproj", "{0C6674CC-6D49-414A-9B41-D4E175028FFB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolsExample", "gong-wpf-dragdrop\Examples\SchoolsExample\SchoolsExample.csproj", "{F2C9DCF4-9C94-4389-9532-E9E7D0412C01}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{191D9B69-4A13-448B-9553-3F94C092B792}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{191D9B69-4A13-448B-9553-3F94C092B792}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{191D9B69-4A13-448B-9553-3F94C092B792}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{191D9B69-4A13-448B-9553-3F94C092B792}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C6674CC-6D49-414A-9B41-D4E175028FFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C6674CC-6D49-414A-9B41-D4E175028FFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C6674CC-6D49-414A-9B41-D4E175028FFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C6674CC-6D49-414A-9B41-D4E175028FFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2C9DCF4-9C94-4389-9532-E9E7D0412C01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2C9DCF4-9C94-4389-9532-E9E7D0412C01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2C9DCF4-9C94-4389-9532-E9E7D0412C01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2C9DCF4-9C94-4389-9532-E9E7D0412C01}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {934EF673-5912-4E9B-86F3-C78A0E0D058A}
+	EndGlobalSection
+EndGlobal

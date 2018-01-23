@@ -1,0 +1,6 @@
+D:\Program Files\HK\Documents\GitHub\Reorder_item_WPF\gong-wpf-dragdrop\Backup\GongSolutions.Wpf.DragDrop\bin\Debug\GongSolutions.Wpf.DragDrop.dll
+D:\Program Files\HK\Documents\GitHub\Reorder_item_WPF\gong-wpf-dragdrop\Backup\GongSolutions.Wpf.DragDrop\bin\Debug\GongSolutions.Wpf.DragDrop.pdb
+D:\Program Files\HK\Documents\GitHub\Reorder_item_WPF\gong-wpf-dragdrop\Backup\GongSolutions.Wpf.DragDrop\obj\Debug\GongSolutions.Wpf.DragDrop.csprojResolveAssemblyReference.cache
+D:\Program Files\HK\Documents\GitHub\Reorder_item_WPF\gong-wpf-dragdrop\Backup\GongSolutions.Wpf.DragDrop\obj\Debug\GongSolutions.Wpf.DragDrop.csproj.CoreCompileInputs.cache
+D:\Program Files\HK\Documents\GitHub\Reorder_item_WPF\gong-wpf-dragdrop\Backup\GongSolutions.Wpf.DragDrop\obj\Debug\GongSolutions.Wpf.DragDrop.dll
+D:\Program Files\HK\Documents\GitHub\Reorder_item_WPF\gong-wpf-dragdrop\Backup\GongSolutions.Wpf.DragDrop\obj\Debug\GongSolutions.Wpf.DragDrop.pdb

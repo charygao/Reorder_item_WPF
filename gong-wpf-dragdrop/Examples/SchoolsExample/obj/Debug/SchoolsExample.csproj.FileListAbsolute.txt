@@ -1,0 +1,17 @@
+D:\Program Files\HK\Documents\GitHub\Reorder_item_WPF\gong-wpf-dragdrop\Backup\Examples\SchoolsExample\bin\Debug\SchoolsExample.exe
+D:\Program Files\HK\Documents\GitHub\Reorder_item_WPF\gong-wpf-dragdrop\Backup\Examples\SchoolsExample\bin\Debug\SchoolsExample.pdb
+D:\Program Files\HK\Documents\GitHub\Reorder_item_WPF\gong-wpf-dragdrop\Backup\Examples\SchoolsExample\bin\Debug\GongSolutions.Wpf.DragDrop.dll
+D:\Program Files\HK\Documents\GitHub\Reorder_item_WPF\gong-wpf-dragdrop\Backup\Examples\SchoolsExample\bin\Debug\GongSolutions.Wpf.DragDrop.pdb
+D:\Program Files\HK\Documents\GitHub\Reorder_item_WPF\gong-wpf-dragdrop\Backup\Examples\SchoolsExample\obj\Debug\SchoolsExample.csprojResolveAssemblyReference.cache
+D:\Program Files\HK\Documents\GitHub\Reorder_item_WPF\gong-wpf-dragdrop\Backup\Examples\SchoolsExample\obj\Debug\Window1.g.cs
+D:\Program Files\HK\Documents\GitHub\Reorder_item_WPF\gong-wpf-dragdrop\Backup\Examples\SchoolsExample\obj\Debug\App.g.cs
+D:\Program Files\HK\Documents\GitHub\Reorder_item_WPF\gong-wpf-dragdrop\Backup\Examples\SchoolsExample\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\Program Files\HK\Documents\GitHub\Reorder_item_WPF\gong-wpf-dragdrop\Backup\Examples\SchoolsExample\obj\Debug\SchoolsExample_MarkupCompile.cache
+D:\Program Files\HK\Documents\GitHub\Reorder_item_WPF\gong-wpf-dragdrop\Backup\Examples\SchoolsExample\obj\Debug\SchoolsExample_MarkupCompile.lref
+D:\Program Files\HK\Documents\GitHub\Reorder_item_WPF\gong-wpf-dragdrop\Backup\Examples\SchoolsExample\obj\Debug\Window1.baml
+D:\Program Files\HK\Documents\GitHub\Reorder_item_WPF\gong-wpf-dragdrop\Backup\Examples\SchoolsExample\obj\Debug\SchoolsExample.g.resources
+D:\Program Files\HK\Documents\GitHub\Reorder_item_WPF\gong-wpf-dragdrop\Backup\Examples\SchoolsExample\obj\Debug\SchoolsExample.Properties.Resources.resources
+D:\Program Files\HK\Documents\GitHub\Reorder_item_WPF\gong-wpf-dragdrop\Backup\Examples\SchoolsExample\obj\Debug\SchoolsExample.csproj.GenerateResource.Cache
+D:\Program Files\HK\Documents\GitHub\Reorder_item_WPF\gong-wpf-dragdrop\Backup\Examples\SchoolsExample\obj\Debug\SchoolsExample.csproj.CoreCompileInputs.cache
+D:\Program Files\HK\Documents\GitHub\Reorder_item_WPF\gong-wpf-dragdrop\Backup\Examples\SchoolsExample\obj\Debug\SchoolsExample.exe
+D:\Program Files\HK\Documents\GitHub\Reorder_item_WPF\gong-wpf-dragdrop\Backup\Examples\SchoolsExample\obj\Debug\SchoolsExample.pdb
