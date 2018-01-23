@@ -1,55 +1,62 @@
-﻿using GongSolutions.Wpf.DragDrop;
-using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
+using GongSolutions.Wpf.DragDrop;
 
 namespace Reorder_item_WPF
 {
-    class MainViewModel : IDropTarget
+    internal class MainViewModel : IDropTarget
     {
-        public ObservableCollection<MSP> MSPCollection { get; set; }
+        #region Fields and Properties
+
+        public ObservableCollection<Msp> MspCollection { get; }
+        public ObservableCollection<Msp> NewMspCollection { get; }
+
+        #endregion
+
+        #region  Constructors
 
         public MainViewModel()
         {
-
-
-            MSPCollection = new ObservableCollection<MSP>();
-
-            MSPCollection.Add(new MSP() { 
-                Id = 1,
-                Name = "Anis Derbel"
-            });
-
-            MSPCollection.Add(new MSP()
+            MspCollection = new ObservableCollection<Msp>
             {
-                Id = 2,
-                Name = "Firas Mdimagh"
-            });
-
-            MSPCollection.Add(new MSP()
+                new Msp
+                {
+                    Id = 1,
+                    Name = "Anis Derbel"
+                },
+                new Msp
+                {
+                    Id = 2,
+                    Name = "Firas Mdimagh"
+                },
+                new Msp
+                {
+                    Id = 3,
+                    Name = "Khaled Jemni"
+                },
+                new Msp
+                {
+                    Id = 4,
+                    Name = "Sahbouch"
+                }
+            };
+            NewMspCollection = new ObservableCollection<Msp>
             {
-                Id = 3,
-                Name = "Khaled Jemni"
-            });
-
-            MSPCollection.Add(new MSP()
-            {
-                Id = 4,
-                Name = "Sahbouch"
-            });
-
-        
+                new Msp
+                {
+                    Id = 1,
+                    Name = "DropTargetTest"
+                },
+            };
         }
+
+        #endregion
 
 
         void IDropTarget.DragOver(DropInfo dropInfo)
         {
-            if (dropInfo.Data is MSP)
+            if (dropInfo.Data is Msp)
             {
                 dropInfo.DropTargetAdorner = DropTargetAdorners.Highlight;
                 dropInfo.Effects = DragDropEffects.Move;
@@ -58,9 +65,8 @@ namespace Reorder_item_WPF
 
         void IDropTarget.Drop(DropInfo dropInfo)
         {
-           
-            MSP msp = (MSP)dropInfo.Data;
-            ((IList)dropInfo.DragInfo.SourceCollection).Remove(msp);
+            var msp = (Msp) dropInfo.Data;
+            ((IList) dropInfo.DragInfo.SourceCollection).Remove(msp);
         }
     }
 }

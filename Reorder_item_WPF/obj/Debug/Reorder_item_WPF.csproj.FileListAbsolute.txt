@@ -28,3 +28,4 @@ D:\Program Files\HK\Documents\GitHub\Reorder_item_WPF\Reorder_item_WPF\obj\Debug
 D:\Program Files\HK\Documents\GitHub\Reorder_item_WPF\Reorder_item_WPF\obj\Debug\Reorder_item_WPF.pdb
 D:\Program Files\HK\Documents\GitHub\Reorder_item_WPF\Reorder_item_WPF\bin\Debug\GongSolutions.Wpf.DragDrop.dll
 D:\Program Files\HK\Documents\GitHub\Reorder_item_WPF\Reorder_item_WPF\bin\Debug\GongSolutions.Wpf.DragDrop.pdb
+D:\Program Files\HK\Documents\GitHub\Reorder_item_WPF\Reorder_item_WPF\obj\Debug\Reorder_item_WPF_MarkupCompile.lref

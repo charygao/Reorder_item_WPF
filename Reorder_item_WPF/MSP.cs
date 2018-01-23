@@ -1,16 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Reorder_item_WPF
+﻿namespace Reorder_item_WPF
 {
-    class MSP
+    internal class Msp
     {
+        #region Fields and Properties
 
         public int Id { get; set; }
         public string Name { get; set; }
-        
+
+        #endregion
     }
 }

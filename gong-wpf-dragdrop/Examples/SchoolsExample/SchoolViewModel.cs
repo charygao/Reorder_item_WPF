@@ -1,19 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 
 namespace SchoolsExample
 {
-    class SchoolViewModel
+    internal class SchoolViewModel
     {
+        #region Fields and Properties
+
+        // ReSharper disable once UnusedAutoPropertyAccessor.Global
+        public string Name { get; set; }
+        // ReSharper disable once CollectionNeverQueried.Global
+        public ObservableCollection<PupilViewModel> Pupils { get; set; }
+
+        #endregion
+
+        #region  Constructors
+
         public SchoolViewModel()
         {
             Pupils = new ObservableCollection<PupilViewModel>();
         }
 
-        public string Name { get; set; }
-        public ObservableCollection<PupilViewModel> Pupils { get;  set; }
+        #endregion
     }
 }

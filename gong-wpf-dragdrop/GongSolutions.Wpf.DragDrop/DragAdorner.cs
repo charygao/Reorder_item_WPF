@@ -1,75 +1,80 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Windows;
 using System.Windows.Documents;
-using System.Windows;
 using System.Windows.Media;
 
 namespace GongSolutions.Wpf.DragDrop
 {
-    class DragAdorner : Adorner
+    internal class DragAdorner : Adorner
     {
-        public DragAdorner(UIElement adornedElement, UIElement adornment)
-            : base(adornedElement)
-        {
-            m_AdornerLayer = AdornerLayer.GetAdornerLayer(adornedElement);
-            m_AdornerLayer.Add(this);
-            m_Adornment = adornment;
-            IsHitTestVisible = false;
-        }
+        #region Fields and Properties
 
-        public Point MousePosition 
+        private readonly AdornerLayer _mAdornerLayer;
+        private readonly UIElement _mAdornment;
+        private Point _mMousePosition;
+
+        public Point MousePosition
         {
-            get { return m_MousePosition; }
+            private get => _mMousePosition;
             set
             {
-                if (m_MousePosition != value)
+                if (_mMousePosition != value)
                 {
-                    m_MousePosition = value;
-                    m_AdornerLayer.Update(AdornedElement);
+                    _mMousePosition = value;
+                    _mAdornerLayer.Update(AdornedElement);
                 }
             }
         }
 
-        public void Detatch()
+        protected override int VisualChildrenCount => 1;
+
+        #endregion
+
+        #region  Constructors
+
+        public DragAdorner(UIElement adornedElement, UIElement adornment)
+            : base(adornedElement)
         {
-            m_AdornerLayer.Remove(this);
+            _mAdornerLayer = AdornerLayer.GetAdornerLayer(adornedElement);
+            _mAdornerLayer.Add(this);
+            _mAdornment = adornment;
+            IsHitTestVisible = false;
         }
 
-        protected override Size ArrangeOverride(Size finalSize)
+        #endregion
+
+        #region  Methods
+
+        public void Detatch()
         {
-            m_Adornment.Arrange(new Rect(finalSize));
-            return finalSize;
+            _mAdornerLayer.Remove(this);
         }
-        
+
         public override GeneralTransform GetDesiredTransform(GeneralTransform transform)
         {
-            GeneralTransformGroup result = new GeneralTransformGroup();
+            var result = new GeneralTransformGroup();
             result.Children.Add(base.GetDesiredTransform(transform));
             result.Children.Add(new TranslateTransform(MousePosition.X - 4, MousePosition.Y - 4));
 
             return result;
         }
 
+        protected override Size ArrangeOverride(Size finalSize)
+        {
+            _mAdornment.Arrange(new Rect(finalSize));
+            return finalSize;
+        }
+
         protected override Visual GetVisualChild(int index)
         {
-            return m_Adornment;
+            return _mAdornment;
         }
 
         protected override Size MeasureOverride(Size constraint)
         {
-            m_Adornment.Measure(constraint);
-            return m_Adornment.DesiredSize;
+            _mAdornment.Measure(constraint);
+            return _mAdornment.DesiredSize;
         }
 
-        protected override int VisualChildrenCount
-        {
-            get { return 1; }
-        }
-
-        AdornerLayer m_AdornerLayer;
-        UIElement m_Adornment;
-        Point m_MousePosition;
+        #endregion
     }
 }

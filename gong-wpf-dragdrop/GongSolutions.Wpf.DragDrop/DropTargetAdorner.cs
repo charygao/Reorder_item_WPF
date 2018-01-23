@@ -1,42 +1,48 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Windows.Documents;
 using System.Windows;
-using System.Windows.Media;
+using System.Windows.Documents;
 
 namespace GongSolutions.Wpf.DragDrop
 {
     public abstract class DropTargetAdorner : Adorner
     {
-        public DropTargetAdorner(UIElement adornedElement)
+        #region Fields and Properties
+
+        private readonly AdornerLayer _mAdornerLayer;
+
+        public DropInfo DropInfo { protected get; set; }
+
+        #endregion
+
+        #region  Constructors
+
+        protected DropTargetAdorner(UIElement adornedElement)
             : base(adornedElement)
         {
-            m_AdornerLayer = AdornerLayer.GetAdornerLayer(adornedElement);
-            m_AdornerLayer.Add(this);
+            _mAdornerLayer = AdornerLayer.GetAdornerLayer(adornedElement);
+            _mAdornerLayer.Add(this);
             IsHitTestVisible = false;
         }
 
+        #endregion
+
+        #region  Methods
+
         public void Detatch()
         {
-            m_AdornerLayer.Remove(this);
+            _mAdornerLayer.Remove(this);
         }
-
-        public DropInfo DropInfo { get; set; }
 
         internal static DropTargetAdorner Create(Type type, UIElement adornedElement)
         {
             if (!typeof(DropTargetAdorner).IsAssignableFrom(type))
-            {
                 throw new InvalidOperationException(
                     "The requested adorner class does not derive from DropTargetAdorner.");
-            }
 
-            return (DropTargetAdorner)type.GetConstructor(new[] { typeof(UIElement) })
-                .Invoke(new[] { adornedElement });
+            return (DropTargetAdorner) type.GetConstructor(new[] {typeof(UIElement)})
+                ?.Invoke(new object[] {adornedElement});
         }
 
-        AdornerLayer m_AdornerLayer;
+        #endregion
     }
 }

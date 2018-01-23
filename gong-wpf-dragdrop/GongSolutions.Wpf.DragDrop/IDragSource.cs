@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace GongSolutions.Wpf.DragDrop
+﻿namespace GongSolutions.Wpf.DragDrop
 {
     public interface IDragSource
     {
+        #region  Methods
+
         void StartDrag(DragInfo dragInfo);
+
+        #endregion
     }
 }
